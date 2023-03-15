@@ -9,7 +9,7 @@ var  passport              =      require("passport");
 var  LocalStrategy         =      require("passport-local");
 var  passportLocalMongoose =      require("passport-local-mongoose");
 const { Passport }         =      require("passport");
-
+const port                 =      process.env.PORT || 3001
 
 
 
@@ -195,7 +195,7 @@ function isLoggedIn(req, res, next){
     res.redirect("/login");
 }
 
-app.listen(3001,function()
+app.listen(port,function()
 {
     console.log("Severed Started");
 });
